@@ -1,10 +1,10 @@
-body{
+body {
     margin: 0;
     padding: 0;
 }
 
 /* IMAGE */
-.bg{
+.bg {
     position: absolute;
     height: 100vh;
     width: 100vw;
@@ -18,7 +18,7 @@ body{
 }
 
 /* NAVBAR */
-.nav{
+.nav {
     height: 3.2rem;
     display: flex;
     justify-content: space-between;
@@ -27,37 +27,38 @@ body{
 }
 
 /* LOGO */
-.nav_logo{
+.nav_logo {
     font-size: 1.5rem;
     margin: auto 1rem;
 }
 
-.nav_menu ul{
+.nav_menu ul {
     margin: 0;
     padding: 0;
     display: flex;
 }
 
-.nav_menu ul li{
+.nav_menu ul li {
     list-style: none;
 }
 
-.nav_menu ul li a{
+.nav_menu ul li a {
     text-decoration: none;
     color: #fff;
     padding: 1rem;
     display: block;
 }
 
-.nav_menu li:hover{
+.nav_menu li:hover {
     background-color: rgba(255, 255, 255, 0.5);
 }
 
 /* ICON HAMBURGER */
-.nav_hamburger{
+.nav_hamburger {
     width: 1.875rem;
     height: 1.313rem;
-    display: flex;
+    /* display: flex; lho cambiata dopo, appena ho fatto @media screen di nav_hamburger */
+    display: none;
     flex-direction: column;
     justify-content: space-between;
     position: absolute;
@@ -65,10 +66,30 @@ body{
     right: 1rem;
 }
 
-.nav_hamburger_line{
+.nav_hamburger_line {
     height: 0.118rem;
     width: 100%;
     background-color: #fff;
     border-radius: 0.625rem;
     transition: all ease-in-out 0.2s;
 }
+
+/* RESPONSIVE */
+@media screen and (max-width: 550px) {
+
+    .nav_hamburger {
+        display: flex;
+    }
+
+    /* TENDINA TRASPARENTE */
+    .nav_menu {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        background-color: rgba(255, 255, 255, 0.2);
+        /* top: -10rem; */
+        width: 100%;
+        transition: all ease-in-out 0.2s;
+    }
+
+    
