@@ -111,7 +111,7 @@ body {
         z-index: -1;
     }
 
-    .nav_menu:active {
+    .nav_menu.active {
         top: 0;
     }
 
@@ -126,3 +126,5 @@ body {
     .nav_hamburger.active :nth-child(3) {
         transform: rotate(-45deg) translate(0.45rem, -0.1875rem);
     }
+
+}
